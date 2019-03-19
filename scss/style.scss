@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Merienda");
+
+// mixins
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+	font-family: 'Merienda';
+	margin: 0;
+	padding: 0;
+	overflow:hidden;
+}
+
+.title{
+	z-index:99999;
+	cursor:pointer;
+	@include centerer;
+	position:absolute;
+	font-size:20px;
+	&:hover{
+		a{
+			border-bottom: none;
+			
+		}
+	}
+	p{
+		max-width: 300px;
+		line-height: 140%;
+		color: white;
+	}
+	span{
+		color:'red';
+		opacity:0.5;
+		display:block;
+		
+		margin-bottom:12px;
+		font-size:12px;
+		transition:all 0.2s;
+	}
+	a{
+		text-decoration:none;
+		border-bottom: 2px solid white;
+		color:white;
+		font-size:58px;
+		font-weight: 900;
+		transition:all 0.2s;
+		&:before{
+		 content: "";
+		 display: inline-block;
+		 position: absolute;
+		 top: .3em;
+		 right: 0;
+		 bottom: .1em;
+		 left: 0;
+		 z-index: -1;
+		}
+	}
+}

@@ -1,27 +1,52 @@
-html,
+@import url("https://fonts.googleapis.com/css?family=Merienda");
 body {
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-html .slides,
-body .slides,
-html > .dg,
-body > .dg {
-  display: none;
-}
-@media (min-width: 1000px) {
-  body {
-    background-repeat: no-repeat;
-  }
-  body > .dg {
-    display: block;
-  }
+    font-family: "Merienda";
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.slides {
-  margin-top: -70%;
+.title {
+    z-index: 99999;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 20px;
+}
+.title:hover a {
+    border-bottom: none;
+}
+.title p {
+    line-height: 140%;
+    color: white;
+}
+.title span {
+    color: "red";
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+.title a {
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 58px;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+.title a:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0.3em;
+    right: 0;
+    bottom: 0.1em;
+    left: 0;
+    z-index: -1;
 }
